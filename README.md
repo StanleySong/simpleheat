@@ -54,6 +54,6 @@ heat.resize();
 
 ```js
 // draw the heatmap with optional minimum point opacity (0.05 by default), null by default for globalCompositeOperation
-// you can specify globalCompositeOperation by yourself, like 'xor'
+// you can specify globalCompositeOperation by yourself, like 'xor' heat.draw(minOpacity, 'xor');
 heat.draw(minOpacity, null);
 ```
