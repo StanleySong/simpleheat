@@ -95,12 +95,14 @@ simpleheat.prototype = {
         return this;
     },
 
-    draw: function (minOpacity) {
+    draw: function (minOpacity, globalCompositeOperation) {
         if (!this._circle) this.radius(this.defaultRadius);
         if (!this._grad) this.gradient(this.defaultGradient);
 
         var ctx = this._ctx;
-
+        if (globalCompositeOperation) {
+            ctx.globalCompositeOperation = globalCompositeOperation;
+        }
         ctx.clearRect(0, 0, this._width, this._height);
 
         // draw a grayscale heatmap by putting a blurred circle at each data point
