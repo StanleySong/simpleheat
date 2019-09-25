@@ -54,5 +54,5 @@ heat.resize();
 
 ```js
 // draw the heatmap with optional minimum point opacity (0.05 by default)
-heat.draw(minOpacity);
+heat.draw(minOpacity, null);
 ```
